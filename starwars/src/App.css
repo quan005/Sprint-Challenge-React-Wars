@@ -6,3 +6,24 @@
   text-shadow: 1px 1px 5px #fff;
 }
 /* write your parent styles in here for your App.js */
+.class-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+}
+.character-card {
+  background: rgba(255, 255, 255, .5);
+  width: 40%;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.character-card h3 {
+  color: #68230D;
+  font-size: 2em;
+}
