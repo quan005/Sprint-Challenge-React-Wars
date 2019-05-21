@@ -33,18 +33,20 @@ class App extends Component {
   
 
   render() {
+    const characterInfo = this.state.starwarsChars.map(characterData => (
+      <Character 
+      character={characterData} 
+      homeworld={characterData.homeworld}
+      key={characterData.name} 
+      />
+    ));
+
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
 
         <div className="class-list">
-          {this.state.starwarsChars.map(characterData => (
-            <Character 
-            character={characterData} 
-            homeworld={characterData.homeworld}
-            key={characterData.name} 
-            />
-          ))}
+          {characterInfo}
         </div>
       </div>
     );

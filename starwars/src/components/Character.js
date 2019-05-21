@@ -7,34 +7,7 @@ import Species from './Species';
 const Character = props => {
     // console.log(props.character);
     // console.log(props.homeworld);
-    // console.log(props.species[0]);
-
-    const homeWorld = [];
-    const species = [];
-
-    fetch(`${props.homeworld}`)
-        .then(res => {
-            return res.json();
-        })
-        .then(data => {
-            homeWorld.push(data);
-            console.log(homeWorld);
-        })
-        .catch(err => {
-            throw new Error(err);
-        });
-
-    fetch(`${props.character.species}`)
-        .then(res => {
-            return res.json();
-        })
-        .then(data => {
-            species.push(data);
-            
-        })
-        .catch(err => {
-            throw new Error(err);
-        })
+    console.log(props.character.species);
 
     return (
         <div className="character-card">
@@ -43,9 +16,9 @@ const Character = props => {
             </h3>
 
             <div className="character-info">
-                {/* <HomeWorld homeWorld={homeWorld.name}/>
+                <HomeWorld homeWorld={props.homeworld}/>
 
-                <Species species={species.name}/> */}
+                <Species species={props.character.species}/>
 
                 <p>
                     <strong>Gender: </strong> {props.character.gender}
